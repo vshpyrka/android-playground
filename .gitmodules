@@ -1,9 +1,9 @@
 [submodule "app/libs/android-jni-example"]
 	path = app/libs/android-jni-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
+	url = https://github.com/vshpyrka/android-jni-example.git
 [submodule "app/libs/android-predictive-back-example"]
 	path = app/libs/android-predictive-back-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
+	url = https://github.com/vshpyrka/android-predictive-back-example.git
 [submodule "app/libs/android-datastore-example"]
 	path = app/libs/android-datastore-example
 	url = https://github.com/vshpyrka/android-datastore-example
