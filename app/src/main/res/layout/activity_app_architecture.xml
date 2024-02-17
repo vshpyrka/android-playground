@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".architecture.AppArchitectureActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lifecycle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="Handling Lifecycle"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/view_model"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="ViewModel"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/work_manager"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="Work Manager"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/datastore"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="DataStore"
+        android:textSize="18sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

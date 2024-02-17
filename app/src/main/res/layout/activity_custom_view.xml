@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".views.CustomViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom View Group"
+            android:textColor="#fff"
+            tools:ignore="HardcodedText" />
+
+        <com.example.views.ContactListItem
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Custom Aspect Ratio Image"
+            android:textColor="#fff"
+            tools:ignore="HardcodedText" />
+
+        <com.example.myapplication.views.FixedAspectRatioImageView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:aspect_ratio="16:9"
+            app:srcCompat="@drawable/ic_android" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Custom Progress bar"
+            android:textColor="#fff"
+            tools:ignore="HardcodedText" />
+
+        <com.example.views.CustomProgressBar
+            android:id="@+id/progress"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp" />
+
+        <com.example.views.DegreePickerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.example.views.WrapChildLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ipsum"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="is"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="simply"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dummy"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="text"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="of"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="the"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="printing"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="and"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="typesetting"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="industry"
+                tools:ignore="HardcodedText" />
+
+        </com.example.views.WrapChildLayout>
+    </LinearLayout>
+</ScrollView>

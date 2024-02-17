@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LauncherActivity">
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/aspect_ratio"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/listPreferredItemHeight"
+      android:background="?attr/selectableItemBackground"
+      android:gravity="center"
+      android:text="Support Different Aspect Ratio"
+      android:textSize="18sp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/locales"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/listPreferredItemHeight"
+      android:background="?attr/selectableItemBackground"
+      android:gravity="center"
+      android:text="Support Different Language Locales"
+      android:textSize="18sp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/media_projection"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/listPreferredItemHeight"
+      android:background="?attr/selectableItemBackground"
+      android:gravity="center"
+      android:text="Media Projection"
+      android:textSize="18sp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/supported_screen_size"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/listPreferredItemHeight"
+      android:background="?attr/selectableItemBackground"
+      android:gravity="center"
+      android:text="Supported screen sizes"
+      android:textSize="18sp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/sliding_pane_adaptive_design"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/listPreferredItemHeight"
+      android:background="?attr/selectableItemBackground"
+      android:gravity="center"
+      android:text="Sliding Pane Adaptive Design"
+      android:textSize="18sp" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/embedded_activity"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/listPreferredItemHeight"
+      android:background="?attr/selectableItemBackground"
+      android:gravity="center"
+      android:text="Embedded activity"
+      android:textSize="18sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

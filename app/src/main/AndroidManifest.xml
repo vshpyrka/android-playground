@@ -1,0 +1,100 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <!-- Supports only tablets and TV-->
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <!--     Compatible screen sizes and densities. You should never use both elements and you should use only <supports-screens> when possible.-->
+    <!--    <compatible-screens>-->
+    <!--        <screen android:screenSize="xlarge" android:screenDensity="ldpi" />-->
+    <!--        <screen android:screenSize="xlarge" android:screenDensity="mdpi" />-->
+    <!--        <screen android:screenSize="xlarge" android:screenDensity="hdpi" />-->
+    <!--        <screen android:screenSize="xlarge" android:screenDensity="xhdpi" />-->
+    <!--    </compatible-screens>-->
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        tools:replace="android:theme"
+        tools:targetApi="tiramisu">
+
+        <activity
+            android:name="com.example.myapplication.LauncherActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- App Static Shortcut -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcut_static" />
+        </activity>
+
+        <activity
+            android:name="com.example.myapplication.resources.ResourcesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.myapplication.resources.ResourceTypesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.myapplication.device.DeviceCompatibilityActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.myapplication.device.ResizeAspectRatioActivity"
+            android:exported="false"
+            android:maxAspectRatio="2.5"
+            android:resizeableActivity="false">
+
+            <meta-data
+                android:name="android.max_aspect"
+                android:value="2.4" />
+        </activity>
+
+        <activity
+            android:name="com.example.myapplication.device.SupportDifferentLanguageLocalesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.myapplication.device.SupportDifferentScreenSizesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".architecture.LifecycleActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.myapplication.architecture.AppArchitectureActivity"
+            android:exported="true" />
+
+        <activity
+            android:name="com.example.myapplication.views.CustomViewActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.myapplication.entrypoints.EntryPointActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
