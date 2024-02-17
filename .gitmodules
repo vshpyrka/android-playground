@@ -43,3 +43,9 @@
 [submodule "app/libs/android-degree-picker-view-example"]
 	path = app/libs/android-degree-picker-view-example
 	url = https://github.com/vshpyrka/android-degree-picker-view-example
+[submodule "app/libs/android-jni-example"]
+	path = app/libs/android-jni-example
+	url = https://github.com/vshpyrka/android-jni-example
+[submodule "app/libs/android-predictive-back-example"]
+	path = app/libs/android-predictive-back-example
+	url = https://github.com/vshpyrka/android-predictive-back-example
