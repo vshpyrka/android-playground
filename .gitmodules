@@ -1,51 +1,51 @@
-[submodule "app/libs/android-degree-picker-view-example"]
-	path = app/libs/android-degree-picker-view-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-custom-progress-view-example"]
-	path = app/libs/android-custom-progress-view-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-wrap-children-group-example"]
-	path = app/libs/android-wrap-children-group-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-custom-view-group-example"]
-	path = app/libs/android-custom-view-group-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-per-app-language-example"]
-	path = app/libs/android-per-app-language-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-resource-types-example"]
-	path = app/libs/android-resource-types-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-viewmodel-example"]
-	path = app/libs/android-viewmodel-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-slidingpanelayout-example"]
-	path = app/libs/android-slidingpanelayout-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-embedded-activity-example"]
-	path = app/libs/android-embedded-activity-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-workmanager-example"]
-	path = app/libs/android-workmanager-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-documents-example"]
-	path = app/libs/android-documents-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-shortcuts-example"]
-	path = app/libs/android-shortcuts-example
+[submodule "app/libs/android-jni-example"]
+	path = app/libs/android-jni-example
 	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
 [submodule "app/libs/android-predictive-back-example"]
 	path = app/libs/android-predictive-back-example
 	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-navigation-example"]
-	path = app/libs/android-navigation-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-mediaprojection-example"]
-	path = app/libs/android-mediaprojection-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
 [submodule "app/libs/android-datastore-example"]
 	path = app/libs/android-datastore-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
-[submodule "app/libs/android-jni-example"]
-	path = app/libs/android-jni-example
-	url = https://github.com/vshpyrka/android-degree-picker-view-example.git
+	url = https://github.com/vshpyrka/android-datastore-example
+[submodule "app/libs/android-mediaprojection-example"]
+	path = app/libs/android-mediaprojection-example
+	url = https://github.com/vshpyrka/android-mediaprojection-example
+[submodule "app/libs/android-navigation-example"]
+	path = app/libs/android-navigation-example
+	url = https://github.com/vshpyrka/android-navigation-example
+[submodule "app/libs/android-shortcuts-example"]
+	path = app/libs/android-shortcuts-example
+	url = https://github.com/vshpyrka/android-shortcuts-example
+[submodule "app/libs/android-documents-example"]
+	path = app/libs/android-documents-example
+	url = https://github.com/vshpyrka/android-documents-example
+[submodule "app/libs/android-workmanager-example"]
+	path = app/libs/android-workmanager-example
+	url = https://github.com/vshpyrka/android-workmanager-example
+[submodule "app/libs/android-slidingpanelayout-example"]
+	path = app/libs/android-slidingpanelayout-example
+	url = https://github.com/vshpyrka/android-slidingpanelayout-example
+[submodule "app/libs/android-viewmodel-example"]
+	path = app/libs/android-viewmodel-example
+	url = https://github.com/vshpyrka/android-viewmodel-example
+[submodule "app/libs/android-embedded-activity-example"]
+	path = app/libs/android-embedded-activity-example
+	url = https://github.com/vshpyrka/android-embedded-activity-example
+[submodule "app/libs/android-resource-types-example"]
+	path = app/libs/android-resource-types-example
+	url = https://github.com/vshpyrka/android-resource-types-example
+[submodule "app/libs/android-per-app-language-example"]
+	path = app/libs/android-per-app-language-example
+	url = https://github.com/vshpyrka/android-per-app-language-example
+[submodule "app/libs/android-custom-view-group-example"]
+	path = app/libs/android-custom-view-group-example
+	url = https://github.com/vshpyrka/android-custom-view-group-example
+[submodule "app/libs/android-wrap-children-group-example"]
+	path = app/libs/android-wrap-children-group-example
+	url = https://github.com/vshpyrka/android-wrap-children-group-example
+[submodule "app/libs/android-custom-progress-view-example"]
+	path = app/libs/android-custom-progress-view-example
+	url = https://github.com/vshpyrka/android-custom-progress-view-example
+[submodule "app/libs/android-degree-picker-view-example"]
+	path = app/libs/android-degree-picker-view-example
+	url = https://github.com/vshpyrka/android-degree-picker-view-example
