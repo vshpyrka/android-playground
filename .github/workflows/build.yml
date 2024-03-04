@@ -3,6 +3,10 @@ name: Build
 on:
   workflow_dispatch:
 
+env:
+  GITHUB_USER: vshpyrka
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   build:
     permissions:
@@ -21,5 +25,4 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
       - name: Build project
-        run: |
-          ./gradlew connectedAndroidTest mergeAndroidReports --continue
+        run: ./gradlew connectedAndroidTest mergeAndroidReports --continue
