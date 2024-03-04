@@ -25,6 +25,7 @@ jobs:
           path: |
             ~/.gradle/caches
             ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-build-cache-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
