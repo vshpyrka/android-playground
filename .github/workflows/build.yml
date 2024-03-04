@@ -17,4 +17,4 @@ jobs:
           fetch-depth: 0
       - name: Build project
         run: |
-          ls -la
+          ./gradlew connectedAndroidTest mergeAndroidReports --continue
