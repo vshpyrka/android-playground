@@ -63,6 +63,9 @@ jobs:
           echo $ANDROID_HOME
           adb devices
 
+      - name: Run instrumentation tests
+        run: ./gradlew connectedAndroidTest mergeAndroidReports --continue
+
       - name: Cleanup
         if: ${{ always() }}
         env:
