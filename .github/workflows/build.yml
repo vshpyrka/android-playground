@@ -45,7 +45,7 @@ jobs:
       - name: Check devices
         run: |
           ls -la /usr/local/lib/android/sdk/platform-tools
-          export PATH $PATH:$ANDROID_HOME/platform-tools
+          export PATH=$PATH:$ANDROID_HOME/platform-tools
           echo $ANDROID_HOME
           adb devices
 
