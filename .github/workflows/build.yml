@@ -46,5 +46,4 @@ jobs:
         run: |
           ls -la /usr/local/lib/android/sdk/platform-tools
           echo $ANDROID_HOME
-          ssh -V
           /usr/local/lib/android/sdk/platform-tools/adb devices
