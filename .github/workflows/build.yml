@@ -45,4 +45,4 @@ jobs:
       - name: Check devices
         run: |
           ls -la /usr/local/lib/android/sdk/platform-tools
-          adb devices
+          /usr/local/lib/android/sdk/platform-tools/adb devices
