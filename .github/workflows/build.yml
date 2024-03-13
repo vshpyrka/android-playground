@@ -47,3 +47,9 @@ jobs:
           ls -la /usr/local/lib/android/sdk/platform-tools
           echo $ANDROID_HOME
           /usr/local/lib/android/sdk/platform-tools/adb devices
+
+      - name: Cleanup
+        if: ${{ always() }}
+        run: |
+          echo "Cleanup"
+          rm -fr ~/.ssh/key
