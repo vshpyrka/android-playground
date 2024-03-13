@@ -50,7 +50,8 @@ jobs:
           SSH_USER: ${{secrets.SSH_USER}}
         run: |
           mkdir -p ~/.ssh/
-          echo ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+          known_host=$(ssh-keyscan $SSH_HOST)
+          echo $known_host >> ~/.ssh/known_hosts
           echo "$SSH_PRIVATE_KEY" >> ~/.ssh/key
           sudo chmod 600 ~/.ssh/key
           ssh -i ~/.ssh/key -fN -L $SSH_PORT:127.0.0.1:$SSH_PORT $SSH_USER@$SSH_HOST
