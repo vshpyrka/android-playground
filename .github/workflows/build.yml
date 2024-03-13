@@ -34,10 +34,10 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        with:
-          packages: ''
+      #- name: Setup Android SDK
+      #  uses: android-actions/setup-android@v3
+      #  with:
+      #    packages: ''
 
       - name: Build project
         run: ./gradlew assembleDebug
