@@ -46,5 +46,5 @@ jobs:
         run: |
           ls -la /usr/local/lib/android/sdk/platform-tools
           echo $ANDROID_HOME
-          killall adb
+          ssh -V
           /usr/local/lib/android/sdk/platform-tools/adb devices
