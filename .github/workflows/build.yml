@@ -41,3 +41,6 @@ jobs:
 
       - name: Build project
         run: ./gradlew assembleDebug
+      
+      - name: Check devices
+        run: adb devices
