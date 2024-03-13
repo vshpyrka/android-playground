@@ -40,7 +40,7 @@ jobs:
       #    packages: ''
 
       - name: Build project
-        run: ./gradlew assembleDebug
+        run: ./gradlew clean
       
       - name: Check devices
         run: |
