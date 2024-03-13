@@ -45,4 +45,5 @@ jobs:
       - name: Check devices
         run: |
           ls -la /usr/local/lib/android/sdk/platform-tools
+          echo $ANDROID_HOME
           /usr/local/lib/android/sdk/platform-tools/adb devices
