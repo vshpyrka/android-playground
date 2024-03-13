@@ -67,8 +67,8 @@ jobs:
         if: ${{ always() }}
         run: |
           echo "Cleanup"
-          process_id=$(ps aux | grep 'ssh' | grep '5037' | awk '{print $2}')
-          echo $process_id
-          if [ $process_id != "" ]; then
-            kill $process_id
+          #process_id=$(ps aux | grep 'ssh' | grep '5037' | awk '{print $2}')
+          #echo $process_id
+          #if [ $process_id != "" ]; then
+          #  kill $process_id
           rm -fr ~/.ssh
