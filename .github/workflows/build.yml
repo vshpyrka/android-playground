@@ -41,6 +41,10 @@ jobs:
 
       - name: Build project
         run: ./gradlew assembleDebug
+
+      - name: SSH Connect
+        run: |
+          ls -la ~/
       
       - name: Check devices
         run: |
@@ -53,4 +57,5 @@ jobs:
         if: ${{ always() }}
         run: |
           echo "Cleanup"
+          ps aux | grep ssh
           rm -fr ~/.ssh/key
