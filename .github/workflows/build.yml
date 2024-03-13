@@ -43,8 +43,17 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: SSH Connect
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_HOST: ${{secrets.SSH_HOST}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
+          SSH_USER: ${{secrets.SSH_USER}}
         run: |
-          ls -la ~/
+          mkdir -p ~/.ssh/
+          echo ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+          echo "$SSH_PRIVATE_KEY" >> ~/.ssh/key
+          sudo chmod 600 ~/.ssh/key
+          ssh -i ~/.ssh/key -fN -L $SSH_PORT:127.0.0.1:$SSH_PORT $SSH_USER@$SSH_HOST
       
       - name: Check devices
         run: |
@@ -57,5 +66,8 @@ jobs:
         if: ${{ always() }}
         run: |
           echo "Cleanup"
-          ps aux | grep ssh
-          rm -fr ~/.ssh/key
+          process_id = $(ps aux | grep 'ssh' | grep '5037' | awk '{print $2}')
+          echo $process_id
+          if [ $process_id != "" ]; then
+            kill $process_id
+          rm -fr ~/.ssh
