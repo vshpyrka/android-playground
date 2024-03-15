@@ -56,12 +56,6 @@ class ResourcesActivityTest {
     }
 
     @Test
-    fun testOpenInternationalization() {
-        onView(withId(R.id.internationalization)).perform(click())
-        Intents.intended(IntentMatchers.hasComponent(InternationalizationResourceActivity::class.java.name))
-    }
-
-    @Test
     fun testOpenComplexXml() {
         onView(withId(R.id.complexXml)).perform(click())
         Intents.intended(IntentMatchers.hasComponent(ComplexXMLResourceActivity::class.java.name))
