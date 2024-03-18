@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(pluginLibs.plugins.android.application)
     alias(pluginLibs.plugins.kotlin.android)
@@ -34,6 +37,17 @@ android {
         getByName("debug") {
             enableAndroidTestCoverage = true
             isPseudoLocalesEnabled = true
+
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
+    signingConfigs {
+        getByName("debug") {
+            keyAlias = "key0"
+            keyPassword = "1234567890"
+            storeFile = file(rootProject.file("debug.key"))
+            storePassword = "1234567890"
         }
     }
 
