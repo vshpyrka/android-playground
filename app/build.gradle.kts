@@ -22,6 +22,8 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        signingConfig = signingConfigs.getByName("debug")
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -37,8 +39,6 @@ android {
         getByName("debug") {
             enableAndroidTestCoverage = true
             isPseudoLocalesEnabled = true
-
-            signingConfig = signingConfigs.getByName("debug")
         }
     }
 
