@@ -40,7 +40,14 @@ jobs:
       #    packages: ''
 
       - name: Build project
-        run: ./gradlew assembleDebug
+        run: |
+          ./gradlew assembleDebug
+          ls -la /home/runner/.config/.android/
+
+      - name: Replace keystore
+        run: |
+          rm -fr /home/runner/.config/.android/debug.keystore
+          cp -p debug.keystore /home/runner/.config/.android/debug.keystore
 
       - name: SSH Connect
         env:
@@ -55,7 +62,7 @@ jobs:
           echo "$SSH_PRIVATE_KEY" >> ~/.ssh/key
           sudo chmod 600 ~/.ssh/key
           ssh -i ~/.ssh/key -fN -L $SSH_PORT:127.0.0.1:$SSH_PORT $SSH_USER@$SSH_HOST
-      
+
       - name: Check devices
         run: |
           ls -la /usr/local/lib/android/sdk/platform-tools
@@ -77,3 +84,4 @@ jobs:
           #if [ $process_id != "" ]; then
           #  kill $process_id
           rm -fr ~/.ssh
+          rm -fr /home/runner/.config/.android/debug.keystore

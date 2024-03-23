@@ -22,7 +22,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        signingConfig = signingConfigs.getByName("debug")
+        // signingConfig = signingConfigs.getByName("debug")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -42,14 +42,14 @@ android {
         }
     }
 
-    signingConfigs {
-        getByName("debug") {
-            keyAlias = "key0"
-            keyPassword = "1234567890"
-            storeFile = file(rootProject.file("debug.key"))
-            storePassword = "1234567890"
-        }
-    }
+    // signingConfigs {
+    //    getByName("debug") {
+    //        keyAlias = "key0"
+    //        keyPassword = "1234567890"
+    //        storeFile = file(rootProject.file("debug.key"))
+    //        storePassword = "1234567890"
+    //    }
+    // }
 
     androidResources {
         generateLocaleConfig = true
