@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.compose.ComposeLauncherActivity
 import com.example.myapplication.architecture.AppArchitectureActivity
 import com.example.myapplication.databinding.ActivityLauncherBinding
 import com.example.myapplication.device.DeviceCompatibilityActivity
@@ -42,6 +43,9 @@ class LauncherActivity : AppCompatActivity() {
         }
         binding.jni.setOnClickListener {
             startActivity(Intent(this, JniLauncherActivity::class.java))
+        }
+        binding.compose.setOnClickListener {
+            startActivity(Intent(this, ComposeLauncherActivity::class.java))
         }
     }
 }

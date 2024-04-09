@@ -49,3 +49,6 @@
 [submodule "app/libs/android-predictive-back-example"]
 	path = app/libs/android-predictive-back-example
 	url = https://github.com/vshpyrka/android-predictive-back-example
+[submodule "app/libs/android-compose-playground"]
+	path = app/libs/android-compose-playground
+	url = https://github.com/vshpyrka/android-compose-playground

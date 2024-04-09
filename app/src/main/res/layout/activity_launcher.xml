@@ -80,6 +80,15 @@
         android:textSize="18sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/compose"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeight"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="Compose"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/something_else"
         android:layout_width="match_parent"
         android:layout_height="?attr/listPreferredItemHeight"

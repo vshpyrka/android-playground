@@ -1,5 +1,3 @@
-import java.io.FileInputStream
-import java.util.Properties
 
 plugins {
     alias(pluginLibs.plugins.android.application)
@@ -22,8 +20,6 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        // signingConfig = signingConfigs.getByName("debug")
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -41,15 +37,6 @@ android {
             isPseudoLocalesEnabled = true
         }
     }
-
-    // signingConfigs {
-    //    getByName("debug") {
-    //        keyAlias = "key0"
-    //        keyPassword = "1234567890"
-    //        storeFile = file(rootProject.file("debug.key"))
-    //        storePassword = "1234567890"
-    //    }
-    // }
 
     androidResources {
         generateLocaleConfig = true
@@ -118,6 +105,7 @@ dependencies {
     implementation(project(":android-wrap-children-group-example"))
     implementation(project(":android-custom-progress-view-example"))
     implementation(project(":android-degree-picker-view-example"))
+    implementation(project(":android-compose-playground"))
 
     implementation(libs.coroutines)
     implementation(libs.coroutines.android)

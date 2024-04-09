@@ -70,6 +70,7 @@ include(":android-custom-view-group-example")
 include(":android-wrap-children-group-example")
 include(":android-custom-progress-view-example")
 include(":android-degree-picker-view-example")
+include(":android-compose-playground")
 
 project(":android-jni-example").projectDir = File("app/libs/android-jni-example")
 project(":android-datastore-example").projectDir = File("app/libs/android-datastore-example")
@@ -90,3 +91,4 @@ project(":android-custom-view-group-example").projectDir = File("app/libs/androi
 project(":android-wrap-children-group-example").projectDir = File("app/libs/android-wrap-children-group-example")
 project(":android-custom-progress-view-example").projectDir = File("app/libs/android-custom-progress-view-example")
 project(":android-degree-picker-view-example").projectDir = File("app/libs/android-degree-picker-view-example")
+project(":android-compose-playground").projectDir = File("app/libs/android-compose-playground/compose")
