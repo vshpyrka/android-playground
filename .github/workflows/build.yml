@@ -85,3 +85,10 @@ jobs:
           #  kill $process_id
           rm -fr ~/.ssh
           rm -fr /home/runner/.config/.android/debug.keystore
+      - name: Upload reports artifact
+        if: ${{ success() || failure() }}
+        id: upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.repository }}-tests-report
+          path: ./build/androidTest-results
