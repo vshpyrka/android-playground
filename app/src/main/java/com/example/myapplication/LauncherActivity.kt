@@ -8,16 +8,18 @@ import com.example.myapplication.architecture.AppArchitectureActivity
 import com.example.myapplication.databinding.ActivityLauncherBinding
 import com.example.myapplication.device.DeviceCompatibilityActivity
 import com.example.myapplication.entrypoints.EntryPointActivity
+import com.example.myapplication.resources.ResourcesActivity
+import com.example.myapplication.utils.applyWindowInsets
+import com.example.myapplication.views.CustomViewActivity
 import com.example.nativelib.JniLauncherActivity
 import com.example.navigation.NavigationActivity
 import com.example.predictive_back.PredictiveBackNavigationActivity
-import com.example.myapplication.resources.ResourcesActivity
-import com.example.myapplication.views.CustomViewActivity
 
 class LauncherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityLauncherBinding.inflate(layoutInflater)
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
 
         binding.navigation.setOnClickListener {

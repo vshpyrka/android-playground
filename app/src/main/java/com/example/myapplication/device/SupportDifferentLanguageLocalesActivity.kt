@@ -5,13 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.BidiFormatter
 import androidx.core.text.TextDirectionHeuristicsCompat
 import com.example.myapplication.databinding.ActivitySupportDifferentLanguageLocalesBinding
-import java.util.*
+import com.example.myapplication.utils.applyWindowInsets
+import java.util.Locale
 
 class SupportDifferentLanguageLocalesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivitySupportDifferentLanguageLocalesBinding.inflate(layoutInflater)
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
 
         val string = "האם התכוונת ל %s?"

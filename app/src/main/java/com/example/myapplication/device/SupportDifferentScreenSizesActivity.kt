@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.window.layout.WindowMetricsCalculator
 import com.example.myapplication.databinding.ActivitySupportDifferentScreenSizesBinding
+import com.example.myapplication.utils.applyWindowInsets
 
 enum class WindowSizeClass { COMPACT, MEDIUM, EXPANDED }
 
@@ -14,6 +15,7 @@ class SupportDifferentScreenSizesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivitySupportDifferentScreenSizesBinding.inflate(layoutInflater)
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
 
         binding.container.addView(

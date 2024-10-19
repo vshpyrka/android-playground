@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.documents.DocumentsLauncherActivity
 import com.example.myapplication.databinding.ActivityEntryPointBinding
+import com.example.myapplication.utils.applyWindowInsets
 import com.example.shortcuts.ShortcutLauncherActivity
 
 class EntryPointActivity : AppCompatActivity() {
@@ -12,6 +13,7 @@ class EntryPointActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityEntryPointBinding.inflate(layoutInflater)
         title = this::class.java.simpleName
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
         binding.documents.setOnClickListener {
             startActivity(Intent(this, DocumentsLauncherActivity::class.java))

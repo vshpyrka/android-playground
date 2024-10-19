@@ -3,18 +3,20 @@ package com.example.myapplication.resources
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.language.PerAppLanguageActivity
 import com.example.myapplication.databinding.ActivityResourcesBinding
+import com.example.myapplication.utils.applyWindowInsets
 import com.example.resources.ComplexXMLResourceActivity
 import com.example.resources.ConfigurationChangeActivity
 import com.example.resources.DrawableLocalizedResourceActivity
 import com.example.resources.InternationalizationResourceActivity
 import com.example.resources.RTLResourceActivity
-import com.example.language.PerAppLanguageActivity
 
 class ResourcesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityResourcesBinding.inflate(layoutInflater)
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
 
         binding.localizedDrawableResource.setOnClickListener {

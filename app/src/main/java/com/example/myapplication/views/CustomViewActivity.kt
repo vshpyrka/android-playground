@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityCustomViewBinding
+import com.example.myapplication.utils.applyWindowInsets
 import kotlin.random.Random
 
 class CustomViewActivity : AppCompatActivity() {
@@ -14,6 +15,7 @@ class CustomViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCustomViewBinding.inflate(layoutInflater)
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
 
         with(binding) {

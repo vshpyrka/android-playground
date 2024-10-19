@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityResourceTypesBinding
+import com.example.myapplication.utils.applyWindowInsets
 import com.example.resources.types.ResourceTypeAnimActivity
 import com.example.resources.types.ResourceTypeColorStateListActivity
 import com.example.resources.types.ResourceTypeDrawableActivity
@@ -16,6 +17,7 @@ class ResourceTypesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityResourceTypesBinding.inflate(layoutInflater)
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
 
         binding.anim.setOnClickListener {

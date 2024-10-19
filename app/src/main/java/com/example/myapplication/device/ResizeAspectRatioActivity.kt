@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityResizeAspectRatioBinding
+import com.example.myapplication.utils.applyWindowInsets
 
 class ResizeAspectRatioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityResizeAspectRatioBinding.inflate(layoutInflater)
+        binding.root.applyWindowInsets()
         setContentView(binding.root)
 
         binding.text.movementMethod = ScrollingMovementMethod()
