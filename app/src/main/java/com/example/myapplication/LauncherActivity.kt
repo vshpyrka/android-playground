@@ -13,6 +13,7 @@ import com.example.myapplication.utils.applyWindowInsets
 import com.example.myapplication.views.CustomViewActivity
 import com.example.nativelib.JniLauncherActivity
 import com.example.navigation.NavigationActivity
+import com.example.pip.PictureInPictureLauncherActivity
 import com.example.predictive_back.PredictiveBackNavigationActivity
 
 class LauncherActivity : AppCompatActivity() {
@@ -48,6 +49,9 @@ class LauncherActivity : AppCompatActivity() {
         }
         binding.compose.setOnClickListener {
             startActivity(Intent(this, ComposeLauncherActivity::class.java))
+        }
+        binding.pictureInPicture.setOnClickListener {
+            startActivity(Intent(this, PictureInPictureLauncherActivity::class.java))
         }
     }
 }

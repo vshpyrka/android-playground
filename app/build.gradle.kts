@@ -105,6 +105,7 @@ dependencies {
     implementation(project(":android-wrap-children-group-example"))
     implementation(project(":android-custom-progress-view-example"))
     implementation(project(":android-degree-picker-view-example"))
+    implementation(project(":android-picture-in-picture"))
     implementation(project(":android-compose-playground"))
 
     implementation(libs.coroutines)
