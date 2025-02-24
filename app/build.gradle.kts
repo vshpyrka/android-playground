@@ -107,6 +107,7 @@ dependencies {
     implementation(project(":android-degree-picker-view-example"))
     implementation(project(":android-picture-in-picture"))
     implementation(project(":android-compose-playground"))
+    implementation(project(":android-compose-glance-widget-example"))
 
     implementation(libs.coroutines)
     implementation(libs.coroutines.android)

@@ -72,6 +72,7 @@ include(":android-custom-progress-view-example")
 include(":android-degree-picker-view-example")
 include(":android-picture-in-picture")
 include(":android-compose-playground")
+include(":android-compose-glance-widget-example")
 
 project(":android-jni-example").projectDir = File("app/libs/android-jni-example")
 project(":android-datastore-example").projectDir = File("app/libs/android-datastore-example")
@@ -94,3 +95,4 @@ project(":android-custom-progress-view-example").projectDir = File("app/libs/and
 project(":android-degree-picker-view-example").projectDir = File("app/libs/android-degree-picker-view-example")
 project(":android-picture-in-picture").projectDir = File("app/libs/android-picture-in-picture")
 project(":android-compose-playground").projectDir = File("app/libs/android-compose-playground/compose")
+project(":android-compose-glance-widget-example").projectDir = File("app/libs/android-compose-glance-widget-example")
