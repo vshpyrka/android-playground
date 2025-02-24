@@ -19,7 +19,7 @@ class CustomViewActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         with(binding) {
-            contact.iconView.setImageResource(com.example.views.R.drawable.ic_cat)
+            contact.iconView.setImageResource(R.drawable.ic_cat)
             contact.titleView.text = "John Doe"
             contact.subtitleView.text =
                 "Member of the Sales team. Will help you find the right products and pricing for your business"
