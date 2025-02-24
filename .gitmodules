@@ -55,3 +55,6 @@
 [submodule "app/libs/android-picture-in-picture"]
 	path = app/libs/android-picture-in-picture
 	url = git@github.com:vshpyrka/android-picture-in-picture
+[submodule "app/libs/android-picture-in-picture-example"]
+	path = app/libs/android-picture-in-picture-example
+	url = git@github.com:vshpyrka/android-picture-in-picture-example.git
