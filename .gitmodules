@@ -55,3 +55,6 @@
 [submodule "app/libs/android-picture-in-picture-example"]
 	path = app/libs/android-picture-in-picture-example
 	url = git@github.com:vshpyrka/android-picture-in-picture-example.git
+[submodule "app/libs/android-compose-glance-widget-example"]
+	path = app/libs/android-compose-glance-widget-example
+	url = git@github.com:vshpyrka/android-compose-glance-widget-example.git
