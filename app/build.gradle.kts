@@ -142,6 +142,8 @@ dependencies {
     implementation(libs.hilt.android.core)
     kapt(libs.hilt.compiler)
 
+    debugImplementation(testLibs.fragment.testing.manifest)
+
     testImplementation(testLibs.coroutines.test)
     testImplementation(testLibs.core.testing)
     testImplementation(testLibs.android.junit.ktx)
@@ -149,9 +151,7 @@ dependencies {
     testImplementation(testLibs.mockk)
     testImplementation(testLibs.paging.common)
 
-    debugImplementation(testLibs.fragment.testing.manifest)
     androidTestImplementation(testLibs.fragment.testing)
-
     androidTestImplementation(testLibs.coroutines.test)
     androidTestImplementation(testLibs.core.ktx)
     androidTestImplementation(testLibs.navigation.testing)
