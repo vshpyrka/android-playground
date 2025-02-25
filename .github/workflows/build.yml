@@ -73,7 +73,7 @@ jobs:
           adb devices
 
       - name: Run instrumentation tests
-        run: ./gradlew connectedAndroidTest mergeAndroidReports --continue
+        run: ./gradlew connectedDebugAndroidTest mergeAndroidReports --continue
 
       - name: Cleanup
         if: ${{ always() }}
