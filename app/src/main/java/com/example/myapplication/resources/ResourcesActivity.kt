@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.language.PerAppLanguageActivity
-import com.example.myapplication.databinding.ActivityResourcesBinding
+import com.vshpyrka.playground.databinding.ActivityResourcesBinding
 import com.example.myapplication.utils.applyWindowInsets
 import com.example.resources.ComplexXMLResourceActivity
 import com.example.resources.ConfigurationChangeActivity

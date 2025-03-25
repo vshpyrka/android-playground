@@ -3,8 +3,8 @@ package com.example.myapplication.views
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.R
-import com.example.myapplication.databinding.ActivityCustomViewBinding
+import com.vshpyrka.playground.R
+import com.vshpyrka.playground.databinding.ActivityCustomViewBinding
 import com.example.myapplication.utils.applyWindowInsets
 import kotlin.random.Random
 

@@ -9,7 +9,7 @@ import androidx.test.espresso.intent.matcher.IntentMatchers
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.documents.DocumentsLauncherActivity
-import com.example.myapplication.R
+import com.vshpyrka.playground.R
 import com.example.shortcuts.ShortcutLauncherActivity
 import org.junit.After
 import org.junit.Before

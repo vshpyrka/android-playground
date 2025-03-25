@@ -14,6 +14,7 @@ import com.example.nativelib.JniLauncherActivity
 import com.example.navigation.NavigationActivity
 import com.example.myapplication.resources.ResourcesActivity
 import com.example.myapplication.views.CustomViewActivity
+import com.vshpyrka.playground.R
 import org.junit.After
 import org.junit.Before
 import org.junit.Test

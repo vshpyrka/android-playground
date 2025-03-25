@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.datastore.DataStoreLauncherActivity
-import com.example.myapplication.databinding.ActivityAppArchitectureBinding
+import com.vshpyrka.playground.databinding.ActivityAppArchitectureBinding
 import com.example.myapplication.utils.applyWindowInsets
 import com.example.viewmodel.ViewModelActivities
 import com.example.workmanager.WorkManagerActivity

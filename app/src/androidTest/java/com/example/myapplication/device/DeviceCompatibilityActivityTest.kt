@@ -8,7 +8,7 @@ import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.matcher.IntentMatchers
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.myapplication.R
+import com.vshpyrka.playground.R
 import com.example.embeddedactivity.ChatListActivity
 import com.example.slidingpanelayout.SlidingPaneLayoutAdaptiveDesignActivity
 import org.junit.After

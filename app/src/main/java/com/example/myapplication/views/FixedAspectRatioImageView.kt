@@ -6,7 +6,7 @@ import android.graphics.drawable.ColorDrawable
 import android.util.AttributeSet
 import android.util.Rational
 import androidx.appcompat.widget.AppCompatImageView
-import com.example.myapplication.R
+import com.vshpyrka.playground.R
 
 class FixedAspectRatioImageView @JvmOverloads constructor(
     context: Context,

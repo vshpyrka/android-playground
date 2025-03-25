@@ -11,10 +11,10 @@ android {
     compileSdk = sdk.versions.compileSdk.get().toInt()
     ndkVersion = "25.2.9519653"
 
-    namespace = "com.example.myapplication"
+    namespace = "com.vshpyrka.playground"
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "com.vshpyrka.playground"
         minSdk = sdk.versions.minSdk.get().toInt()
         targetSdk = sdk.versions.targetSdk.get().toInt()
         versionCode = 1
@@ -76,6 +76,10 @@ android {
     }
 
     packaging { resources.excludes.add("META-INF/versions/9/previous-compilation-data.bin") }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
 }
 
 kapt {

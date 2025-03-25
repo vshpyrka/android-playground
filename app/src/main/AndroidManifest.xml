@@ -22,7 +22,7 @@
     <!--    </compatible-screens>-->
 
     <application
-        android:name=".App"
+        android:name="com.example.myapplication.App"
         android:allowBackup="false"
         android:enableOnBackInvokedCallback="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -81,7 +81,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".architecture.LifecycleActivity"
+            android:name="com.example.myapplication.architecture.LifecycleActivity"
             android:exported="false" />
 
         <activity

@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.documents.DocumentsLauncherActivity
-import com.example.myapplication.databinding.ActivityEntryPointBinding
+import com.vshpyrka.playground.databinding.ActivityEntryPointBinding
 import com.example.myapplication.utils.applyWindowInsets
 import com.example.shortcuts.ShortcutLauncherActivity
 

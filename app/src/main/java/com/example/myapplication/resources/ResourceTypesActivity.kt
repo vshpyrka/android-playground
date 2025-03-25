@@ -3,7 +3,7 @@ package com.example.myapplication.resources
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.databinding.ActivityResourceTypesBinding
+import com.vshpyrka.playground.databinding.ActivityResourceTypesBinding
 import com.example.myapplication.utils.applyWindowInsets
 import com.example.resources.types.ResourceTypeAnimActivity
 import com.example.resources.types.ResourceTypeColorStateListActivity

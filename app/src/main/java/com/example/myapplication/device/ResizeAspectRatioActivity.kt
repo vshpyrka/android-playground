@@ -3,7 +3,7 @@ package com.example.myapplication.device
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.databinding.ActivityResizeAspectRatioBinding
+import com.vshpyrka.playground.databinding.ActivityResizeAspectRatioBinding
 import com.example.myapplication.utils.applyWindowInsets
 
 class ResizeAspectRatioActivity : AppCompatActivity() {

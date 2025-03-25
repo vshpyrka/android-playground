@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.text.BidiFormatter
 import androidx.core.text.TextDirectionHeuristicsCompat
-import com.example.myapplication.databinding.ActivitySupportDifferentLanguageLocalesBinding
+import com.vshpyrka.playground.databinding.ActivitySupportDifferentLanguageLocalesBinding
 import com.example.myapplication.utils.applyWindowInsets
 import java.util.Locale
 

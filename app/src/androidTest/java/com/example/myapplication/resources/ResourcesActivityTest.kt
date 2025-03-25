@@ -9,7 +9,7 @@ import androidx.test.espresso.intent.matcher.IntentMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.language.PerAppLanguageActivity
-import com.example.myapplication.R
+import com.vshpyrka.playground.R
 import com.example.resources.ComplexXMLResourceActivity
 import com.example.resources.ConfigurationChangeActivity
 import com.example.resources.DrawableLocalizedResourceActivity

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.window.layout.WindowMetricsCalculator
-import com.example.myapplication.databinding.ActivitySupportDifferentScreenSizesBinding
+import com.vshpyrka.playground.databinding.ActivitySupportDifferentScreenSizesBinding
 import com.example.myapplication.utils.applyWindowInsets
 
 enum class WindowSizeClass { COMPACT, MEDIUM, EXPANDED }

@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.embeddedactivity.ChatListActivity
 import com.example.mediaprojection.MediaProjectionActivity
-import com.example.myapplication.databinding.ActivityDeviceCompatibilityBinding
+import com.vshpyrka.playground.databinding.ActivityDeviceCompatibilityBinding
 import com.example.myapplication.utils.applyWindowInsets
 import com.example.slidingpanelayout.SlidingPaneLayoutAdaptiveDesignActivity
 

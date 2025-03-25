@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.compose.ComposeLauncherActivity
 import com.example.myapplication.architecture.AppArchitectureActivity
-import com.example.myapplication.databinding.ActivityLauncherBinding
+import com.vshpyrka.playground.databinding.ActivityLauncherBinding
 import com.example.myapplication.device.DeviceCompatibilityActivity
 import com.example.myapplication.entrypoints.EntryPointActivity
 import com.example.myapplication.resources.ResourcesActivity

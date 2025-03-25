@@ -9,8 +9,6 @@ import dagger.hilt.android.HiltAndroidApp
 @HiltAndroidApp
 class App : Application(), Configuration.Provider {
 
-    val app = "Application"
-
     override fun onCreate() {
         super.onCreate()
         println("onCreate")
