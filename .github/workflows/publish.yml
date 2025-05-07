@@ -49,14 +49,26 @@ jobs:
             # Update build.gradle with new version code and name
             current_version_code="${{ steps.extract_versions.outputs.current_version_code }}"
             current_version_name="${{ steps.extract_versions.outputs.current_version_name }}"
+            
             # Increment existing version code by 1
             final_version_code=$((current_version_code + 1))
             version_number=$(echo "$current_version_name" | sed 's/v//')
             IFS='.' read -ra version_parts <<< "$version_number"
             version_parts[-1]=$((version_parts[-1]+1))
             final_version_name="${version_parts[0]}.${version_parts[1]}"
-            echo $final_version_code
-            echo $final_version_name
+            
+            # Update build.gradle with new version code and name
+            echo "$final_version_code - $final_version_name"
+            
+            # Use sed to replace the values.
+            # The regex tries to match "versionCode = ANY_NUMBER" and "versionName = "ANY_STRING""
+            # -i means edit in place
+            sed -i "s/versionCode = .*/versionCode = $final_version_code/" app/build.gradle.kts
+            sed -i "s/versionName = .*/versionName = \"$final_version_name\"/" app/build.gradle.kts
+            # Note the escaped quotes for versionName if it's a string
+          
+            grep "versionCode =" app/build.gradle.kts 
+            grep "versionName =" app/build.gradle.kts
 #            sed -i "s/^\(\s*versionCode\s*=\s*\)[0-9]\+/\1$final_version_code/" app/build.gradle.kts
 #            sed -i "s/^\(\s*versionName\s*=\s*\)[0-9]\+/\$final_version_name/" app/build.gradle.kts
 #            git status
