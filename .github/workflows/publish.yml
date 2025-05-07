@@ -51,9 +51,11 @@ jobs:
             final_version_name="${{ steps.extract_versions.outputs.release_version_name }}"
             # Increment existing version code by 1
             version_code=$((version_code + 1))
-            sed -i "s/^\(\s*versionCode\s*=\s*\)[0-9]\+/\1$final_version_code/" app/build.gradle.kts
-            sed -i "s/^\(\s*versionName\s*=\s*\)[0-9]\+/\$final_version_name/" app/build.gradle.kts
-            git status
+#            sed -i "s/^\(\s*versionCode\s*=\s*\)[0-9]\+/\1$final_version_code/" app/build.gradle.kts
+#            sed -i "s/^\(\s*versionName\s*=\s*\)[0-9]\+/\$final_version_name/" app/build.gradle.kts
+#            git status
+            echo $version_code
+            echo $version_name
 
 #      - name: Build Release
 #        run: ./gradlew :app:bundleRelease --parallel
