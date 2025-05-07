@@ -77,8 +77,8 @@ jobs:
       - name: Push new version
         run: |
           # Push new version to a new branch
-          version_code="${{ steps.extract_versions.outputs.final_version_code }}"
-          version_name="${{ steps.extract_versions.outputs.final_version_name }}"
+          version_code="${{ steps.increase_version.outputs.final_version_code }}"
+          version_name="${{ steps.increase_version.outputs.final_version_name }}"
           branch="release/$version_name"
           git config user.name "Victor Shpyrka"
           git config user.email "victor.shpyrka@gmail.com"
