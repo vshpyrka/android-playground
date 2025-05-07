@@ -45,6 +45,7 @@ jobs:
           echo "current_version_name=$version_name" >> $GITHUB_OUTPUT
 
       - name: Increase version code and change version name
+        id: increase_version
         run: |
             # Update build.gradle with new version code and name
             current_version_code="${{ steps.extract_versions.outputs.current_version_code }}"
@@ -69,9 +70,39 @@ jobs:
           
             grep "versionCode =" app/build.gradle.kts 
             grep "versionName =" app/build.gradle.kts
-#            sed -i "s/^\(\s*versionCode\s*=\s*\)[0-9]\+/\1$final_version_code/" app/build.gradle.kts
-#            sed -i "s/^\(\s*versionName\s*=\s*\)[0-9]\+/\$final_version_name/" app/build.gradle.kts
-#            git status
+          
+            echo "final_version_code=$final_version_code" >> $GITHUB_OUTPUT
+            echo "final_version_name=$final_version_name" >> $GITHUB_OUTPUT
+
+      - name: Push new version
+        run: |
+          # Push new version to a new branch
+          version_code="${{ steps.extract_versions.outputs.final_version_code }}"
+          version_name="${{ steps.extract_versions.outputs.final_version_name }}"
+          branch="release/$version_name"
+          git config user.name "Victor Shpyrka"
+          git config user.email "victor.shpyrka@gmail.com"
+          git checkout -b ${branch}
+          git add app/build.gradle.kts
+          git commit -m "chore: bump version to $version_name"
+          git push origin ${branch}
+          
+          # Create a pull request
+          sleep 5  # wait 5s for the branch to be pushed (sometimes information about the pushed branch is not available immediately)
+          pr_url=$(gh pr create \
+            --title "chore: bump version to $version_name" \
+            --body "Bump version to $version_name" \
+            --base master \
+            --head "release/$version_name"
+          )
+          echo "pr_url=${pr_url}" >> $GITHUB_OUTPUT
+          
+          # github.token is used because approval cannot be granted by the author of the PR
+          GH_TOKEN=${{ github.token }} 
+          gh pr review "${pr_url}" --approve
+          
+          # attempt to merge, but don't fail if it doesn't work
+          gh pr merge "${pr_url}" --auto --merge || echo "PR can't be merged automatically"
 
 #      - name: Build Release
 #        run: ./gradlew :app:bundleRelease --parallel
