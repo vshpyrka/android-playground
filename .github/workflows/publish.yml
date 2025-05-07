@@ -41,16 +41,20 @@ jobs:
           # Get existing version code from build.gradle
           version_code=$(grep "versionCode" app/build.gradle.kts | awk -F'= ' '{print $2}')
           version_name=$(grep "versionName" app/build.gradle.kts | awk -F'= ' '{print $2}')
-          echo "release_version_code=$version_code" >> $GITHUB_OUTPUT
-          echo "release_version_name=$version_name" >> $GITHUB_OUTPUT
+          echo "current_version_code=$version_code" >> $GITHUB_OUTPUT
+          echo "current_version_name=$version_name" >> $GITHUB_OUTPUT
 
       - name: Increase version code and change version name
         run: |
             # Update build.gradle with new version code and name
-            final_version_code="${{ steps.extract_versions.outputs.release_version_code }}"
-            final_version_name="${{ steps.extract_versions.outputs.release_version_name }}"
+            current_version_code="${{ steps.extract_versions.outputs.current_version_code }}"
+            current_version_name="${{ steps.extract_versions.outputs.current_version_name }}"
             # Increment existing version code by 1
-            final_version_code=$((final_version_code + 1))
+            final_version_code=$((current_version_code + 1))
+            version_number=$(echo "$current_version_name" | sed 's/v//')
+            IFS='.' read -ra version_parts <<< "$version_number"
+            version_parts[-1]=$((version_parts[-1]+1))
+            final_version_name="${version_parts[0]}.${version_parts[1]}"
             echo $final_version_code
             echo $final_version_name
 #            sed -i "s/^\(\s*versionCode\s*=\s*\)[0-9]\+/\1$final_version_code/" app/build.gradle.kts
