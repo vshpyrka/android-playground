@@ -85,7 +85,7 @@ jobs:
 
       - name: Push new version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         run: |
           # Push new version to a new branch
           version_code="${{ steps.increase_version.outputs.final_version_code }}"
