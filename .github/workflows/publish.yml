@@ -103,7 +103,7 @@ jobs:
           pr_url=$(gh pr create \
             --title "chore: bump version to $version_name" \
             --body "Bump version to $version_name" \
-            --base master \
+            --base main \
             --head "release/$version_name"
           )
           echo "pr_url=${pr_url}" >> $GITHUB_OUTPUT
