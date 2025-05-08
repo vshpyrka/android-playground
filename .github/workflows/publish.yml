@@ -110,7 +110,7 @@ jobs:
           
           # github.token is used because approval cannot be granted by the author of the PR
           GH_TOKEN=secrets.PUBLISH_TOKEN
-          gh pr review "${pr_url}" --approve
+#          gh pr review "${pr_url}" --approve
 
           # attempt to merge, but don't fail if it doesn't work
           gh pr merge "${pr_url}" --auto --merge || echo "PR can't be merged automatically"
