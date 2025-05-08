@@ -109,7 +109,7 @@ jobs:
           echo "pr_url=${pr_url}" >> $GITHUB_OUTPUT
           
           # github.token is used because approval cannot be granted by the author of the PR
-          GH_TOKEN=secrets.PUBLISH_TOKEN
+          GH_TOKEN=${{ secrets.PUBLISH_TOKEN }}
 #          gh pr review "${pr_url}" --approve
 
           # attempt to merge, but don't fail if it doesn't work
