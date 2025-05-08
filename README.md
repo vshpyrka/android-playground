@@ -28,7 +28,7 @@ Composite of android examples:
 
 * [android-viewmodel-example](https://github.com/vshpyrka/android-viewmodel-example) - Example of how to use Jetpack ViewModel component.
 
-* [vshpyrka/android-slidingpanelayout-example](https://github.com/vshpyrka/android-slidingpanelayout-example) - Example of SlidingPaneLayout for multi-window layout positioning.
+* [android-slidingpanelayout-example](https://github.com/vshpyrka/android-slidingpanelayout-example) - Example of SlidingPaneLayout for multi-window layout positioning.
 
 * [android-degree-picker-view-example](https://github.com/vshpyrka/android-degree-picker-view-example) - Example of custom view component that serves as a degree picker.
 
