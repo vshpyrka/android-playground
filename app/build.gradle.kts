@@ -87,9 +87,9 @@ kapt {
     correctErrorTypes = true
 }
 
-configurations.configureEach {
-    resolutionStrategy.force("androidx.datastore:datastore-preferences:1.1.4")
-}
+//configurations.configureEach {
+//    resolutionStrategy.force("androidx.datastore:datastore-preferences:1.1.4")
+//}
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
