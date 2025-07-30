@@ -2,7 +2,7 @@
 plugins {
     alias(pluginLibs.plugins.android.application)
     alias(pluginLibs.plugins.kotlin.android)
-    alias(pluginLibs.plugins.kotlin.kapt)
+    alias(pluginLibs.plugins.ksp)
     alias(pluginLibs.plugins.navigation.safeargs)
     alias(pluginLibs.plugins.hilt)
 }
@@ -82,11 +82,6 @@ android {
     }
 }
 
-kapt {
-    // https://kotlinlang.org/docs/reference/kapt.html#non-existent-type-correction
-    correctErrorTypes = true
-}
-
 //configurations.configureEach {
 //    resolutionStrategy.force("androidx.datastore:datastore-preferences:1.1.4")
 //}
@@ -148,7 +143,7 @@ dependencies {
     implementation(libs.shortcuts)
 
     implementation(libs.hilt.android.core)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
     debugImplementation(testLibs.fragment.testing.manifest)
 

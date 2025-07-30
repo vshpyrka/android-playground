@@ -32,16 +32,16 @@ dependencyResolutionManagement {
 
     versionCatalogs {
         create("pluginLibs") {
-            from("com.vshpyrka.android:version-catalog-plugins:latest.release")
+            from("com.vshpyrka.android:version-catalog-plugins:0.10.45")
         }
         create("libs") {
-            from("com.vshpyrka.android:version-catalog-libs:latest.release")
+            from("com.vshpyrka.android:version-catalog-libs:0.10.45")
         }
         create("testLibs") {
-            from("com.vshpyrka.android:version-catalog-test:latest.release")
+            from("com.vshpyrka.android:version-catalog-test:0.10.45")
         }
         create("sdk") {
-            from("com.vshpyrka.android:version-catalog-sdk:latest.release")
+            from("com.vshpyrka.android:version-catalog-sdk:0.10.45")
         }
     }
 }
