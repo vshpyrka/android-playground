@@ -45,52 +45,52 @@ jobs:
         run: |
           ./gradlew assembleDebug
           ls -la /home/runner/.config/.android/
-
-      - name: Replace keystore
-        run: |
-          rm -fr /home/runner/.config/.android/debug.keystore
-          cp -p debug.keystore /home/runner/.config/.android/debug.keystore
-
-      - name: SSH Connect
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SSH_HOST: ${{secrets.SSH_HOST}}
-          SSH_PORT: ${{secrets.SSH_PORT}}
-          SSH_USER: ${{secrets.SSH_USER}}
-        run: |
-          mkdir -p ~/.ssh/
-          known_host=$(ssh-keyscan $SSH_HOST)
-          echo $known_host >> ~/.ssh/known_hosts
-          echo "$SSH_PRIVATE_KEY" >> ~/.ssh/key
-          sudo chmod 600 ~/.ssh/key
-          ssh -i ~/.ssh/key -fN -L $SSH_PORT:127.0.0.1:$SSH_PORT $SSH_USER@$SSH_HOST
-
-      - name: Check devices
-        run: |
-          ls -la /usr/local/lib/android/sdk/platform-tools
-          export PATH=$PATH:$ANDROID_HOME/platform-tools
-          echo $ANDROID_HOME
-          adb devices
-
-      - name: Run instrumentation tests
-        run: ./gradlew connectedDebugAndroidTest mergeAndroidReports --continue
-
-      - name: Cleanup
-        if: ${{ always() }}
-        env:
-          SSH_PORT: ${{secrets.SSH_PORT}}
-        run: |
-          echo "Cleanup"
-          #process_id=$(ps aux | grep 'ssh' | grep $SSH_PORT | awk '{print $2}')
-          echo $process_id
-          #if [ $process_id != "" ]; then
-          #  kill $process_id
-          rm -fr ~/.ssh
-          rm -fr /home/runner/.config/.android/debug.keystore
-      - name: Upload reports artifact
-        if: ${{ success() || failure() }}
-        id: upload-artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: tests-report
-          path: ./build/androidTest-results
+#
+#      - name: Replace keystore
+#        run: |
+#          rm -fr /home/runner/.config/.android/debug.keystore
+#          cp -p debug.keystore /home/runner/.config/.android/debug.keystore
+#
+#      - name: SSH Connect
+#        env:
+#          SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+#          SSH_HOST: ${{secrets.SSH_HOST}}
+#          SSH_PORT: ${{secrets.SSH_PORT}}
+#          SSH_USER: ${{secrets.SSH_USER}}
+#        run: |
+#          mkdir -p ~/.ssh/
+#          known_host=$(ssh-keyscan $SSH_HOST)
+#          echo $known_host >> ~/.ssh/known_hosts
+#          echo "$SSH_PRIVATE_KEY" >> ~/.ssh/key
+#          sudo chmod 600 ~/.ssh/key
+#          ssh -i ~/.ssh/key -fN -L $SSH_PORT:127.0.0.1:$SSH_PORT $SSH_USER@$SSH_HOST
+#
+#      - name: Check devices
+#        run: |
+#          ls -la /usr/local/lib/android/sdk/platform-tools
+#          export PATH=$PATH:$ANDROID_HOME/platform-tools
+#          echo $ANDROID_HOME
+#          adb devices
+#
+#      - name: Run instrumentation tests
+#        run: ./gradlew connectedDebugAndroidTest mergeAndroidReports --continue
+#
+#      - name: Cleanup
+#        if: ${{ always() }}
+#        env:
+#          SSH_PORT: ${{secrets.SSH_PORT}}
+#        run: |
+#          echo "Cleanup"
+#          #process_id=$(ps aux | grep 'ssh' | grep $SSH_PORT | awk '{print $2}')
+#          echo $process_id
+#          #if [ $process_id != "" ]; then
+#          #  kill $process_id
+#          rm -fr ~/.ssh
+#          rm -fr /home/runner/.config/.android/debug.keystore
+#      - name: Upload reports artifact
+#        if: ${{ success() || failure() }}
+#        id: upload-artifact
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: tests-report
+#          path: ./build/androidTest-results
