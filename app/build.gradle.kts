@@ -16,7 +16,6 @@ android {
     defaultConfig {
         applicationId = "com.vshpyrka.playground"
         minSdk = sdk.versions.minSdk.get().toInt()
-        targetSdk = sdk.versions.targetSdk.get().toInt()
         versionCode = 4
         versionName = "1.3"
 
@@ -40,10 +39,6 @@ android {
 
     androidResources {
         generateLocaleConfig = true
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
     }
 
     buildFeatures {

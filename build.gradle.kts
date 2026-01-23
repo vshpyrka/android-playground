@@ -13,4 +13,4 @@ plugins {
     alias(pluginLibs.plugins.serialization) apply false
 }
 
-apply(plugin = "android-reporting")
+//apply(plugin = "android-reporting")
