@@ -2,7 +2,6 @@
 plugins {
     alias(pluginLibs.plugins.android.application) apply false
     alias(pluginLibs.plugins.android.library) apply false
-    alias(pluginLibs.plugins.kotlin.android) apply false
     alias(pluginLibs.plugins.kotlin.jvm) apply false
     alias(pluginLibs.plugins.ksp) apply false
     alias(pluginLibs.plugins.navigation.safeargs) apply false

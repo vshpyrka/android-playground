@@ -1,7 +1,6 @@
 
 plugins {
     alias(pluginLibs.plugins.android.application)
-    alias(pluginLibs.plugins.kotlin.android)
     alias(pluginLibs.plugins.ksp)
     alias(pluginLibs.plugins.navigation.safeargs)
     alias(pluginLibs.plugins.hilt)
