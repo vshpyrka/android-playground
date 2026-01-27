@@ -36,6 +36,12 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install NDK
+        run: sdkmanager --install "ndk;25.2.9519653"
+
       #- name: Setup Android SDK
       #  uses: android-actions/setup-android@v3
       #  with:
@@ -43,7 +49,7 @@ jobs:
 
       - name: Build project
         run: |
-          ./gradlew assembleDebug
+          ./gradlew assembleDebug --info
           ls -la /home/runner/.config/.android/
 #
 #      - name: Replace keystore
