@@ -11,5 +11,3 @@ plugins {
     alias(pluginLibs.plugins.protobuf) apply false
     alias(pluginLibs.plugins.serialization) apply false
 }
-
-//apply(plugin = "android-reporting")

@@ -158,12 +158,12 @@ jobs:
           disable-animations: true
           disk-size: 6G
           heap-size: 600M
-          script: ./gradlew connectedDebugAndroidTest mergeAndroidReports --continue --daemon
+          script: ./gradlew connectedDebugAndroidTest --continue --daemon
 
       - name: Upload reports artifact
         if: ${{ success() || failure() }}
         id: upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: tests-report
-          path: ./build/androidTest-results
+          name: tests-report-${{ matrix.api-level }}
+          path: build/androidTest-results
