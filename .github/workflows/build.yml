@@ -158,7 +158,9 @@ jobs:
           disable-animations: true
           disk-size: 6G
           heap-size: 600M
-          script: ./gradlew connectedDebugAndroidTest --continue --daemon
+          script: |
+            adb shell settings put global hide_error_dialogs 1
+            ./gradlew connectedDebugAndroidTest --continue --daemon
 
       - name: Upload reports artifact
         if: ${{ success() || failure() }}
