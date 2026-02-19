@@ -40,7 +40,7 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Install NDK
-        run: sdkmanager --install "ndk;25.2.9519653"
+        run: sdkmanager --install "ndk;28.2.13676358"
 
       #- name: Setup Android SDK
       #  uses: android-actions/setup-android@v3
@@ -153,7 +153,7 @@ jobs:
         with:
           api-level: ${{ matrix.api-level }}
           arch: x86_64
-          ndk: 25.2.9519653
+          ndk: 28.2.13676358
           cmake: 3.22.1
           disable-animations: true
           disk-size: 6G
