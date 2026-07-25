@@ -15,6 +15,7 @@ android {
     defaultConfig {
         applicationId = "com.vshpyrka.playground"
         minSdk = sdk.versions.minSdk.get().toInt()
+        targetSdk = sdk.versions.targetSdk.get().toInt()
         versionCode = 9
         versionName = "1.8"
 
