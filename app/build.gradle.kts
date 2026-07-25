@@ -15,8 +15,8 @@ android {
     defaultConfig {
         applicationId = "com.vshpyrka.playground"
         minSdk = sdk.versions.minSdk.get().toInt()
-        versionCode = 6
-        versionName = "1.5"
+        versionCode = 7
+        versionName = "1.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
